@@ -1,3 +1,8 @@
+/* StockManagementSystem.java
+StockItemFactory class
+Author: Rupert Van Niekerk (222894237)
+Date: 23 March 2024
+*/
 package za.ac.cput.factory;
 import za.ac.cput.domain.StockItem;
 
