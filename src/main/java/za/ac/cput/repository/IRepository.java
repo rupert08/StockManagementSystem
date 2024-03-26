@@ -1,20 +1,20 @@
-/* StockManagementSystem.java
+/* IRepository.java
 IRepository class
 Author: Rupert Van Niekerk (222894237)
 Date: 25 March 2024
 */
 package za.ac.cput.repository;
 
-import java.util.List;
+import za.ac.cput.domain.StockItem;
 
-public interface IRepository<T> {
+public interface IRepository<T,ID> {
     //Create
-    void add(T item);
+    StockItem create(T t);
    //Read
-    T getById(int id);
+    T read(ID id);
    //Update
-    void update(T item);
+    StockItem update(T t);
     //Delete
-    boolean delete(int id);
-    List<T> getAll();
+    boolean delete(ID id);
+
 }
