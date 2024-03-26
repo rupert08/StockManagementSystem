@@ -1,4 +1,4 @@
-/* StockManagementSystem.java
+/* StockItem.java
 StockItem model class
 Author: Rupert Van Niekerk (222894237)
 Date: 22 March 2024

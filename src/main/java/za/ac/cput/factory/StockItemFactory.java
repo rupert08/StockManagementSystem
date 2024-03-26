@@ -1,4 +1,4 @@
-/* StockManagementSystem.java
+/* StockItemFactory.java
 StockItemFactory class
 Author: Rupert Van Niekerk (222894237)
 Date: 23 March 2024

@@ -9,8 +9,10 @@ import za.ac.cput.domain.StockItem;
 
 import java.util.List;
 
-public interface IStockItemRepository extends IRepository<StockItem> {
-    // Additional method specific to StockItemRepository
+public interface IStockItemRepository extends IRepository<StockItem,String> {
+
+    StockItem read(int id);
+
     List<StockItem> getAll();
 }
 
