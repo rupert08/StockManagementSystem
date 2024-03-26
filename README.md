@@ -1,1 +1,2 @@
-![image](https://github.com/rupert08/StockManagementSystem/assets/127295503/b6e28592-aaa3-4fb0-a964-668eb7d50f06)
+![UML for StockManagementSystem](https://github.com/rupert08/StockManagementSystem/assets/127295503/1a5e6d6e-4476-4f49-a52a-0b167548ed32)
+
