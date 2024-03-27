@@ -10,6 +10,14 @@ import java.util.List;
 
 public interface IUserRepository extends IRepository<User, String> {
 
+    void add(User user);
+
+    User getById(String userId);
+
+    List<User> getAll();
+
     User getUsername(String username);
     List<User> getRole(String role);
+
+    void addUser(User user);
 }
