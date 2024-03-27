@@ -1,12 +1,15 @@
-package za.ac.cput.domain;
+/* InventoryRepository.java
+InventoryRepository model class
+Author: Thapelo Xaba (222400471)
+Date: 22 March 2024
+*/
 
-import static org.junit.jupiter.api.Assertions.*;
+package za.ac.cput.;
 
 import org.junit.jupiter.api.Test;
+import za.ac.cput.domain.Inventory;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
-
-import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.*;
 
 public class InventoryTest {
 
