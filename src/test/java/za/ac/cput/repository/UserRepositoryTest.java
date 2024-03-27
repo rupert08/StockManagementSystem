@@ -27,9 +27,9 @@ public class UserRepositoryTest {
     @Test
     void testAddUser() {
         User user = createUser("1", "Raymond29", "pass123", "admin", "Raymond29@gmail.com");
-        repository.addUser(user);
-        assertEquals(1, repository.getAllUsers().size(), "Repository should contain one user after addition");
-        assertTrue(repository.getAllUsers().contains(user), "Repository should contain the added user");
+        repository.add(user);
+        assertEquals(1, repository.getAll().size(), "Repository should contain one user after addition");
+        assertTrue(repository.getAll().contains(user), "Repository should contain the added user");
         System.out.println("Add User Test Passed");
     }
 
@@ -37,8 +37,8 @@ public class UserRepositoryTest {
     void testGetUserById() {
         String userId = "1"; // Dynamic userId
         User user = createUser(userId, "Raymond29", "pass123", "admin", "Raymond29@gmail.com");
-        repository.addUser(user);
-        User retrievedUser = repository.getUserById(userId);
+        repository.add(user);
+        User retrievedUser = repository.getById(userId);
         assertNotNull(retrievedUser, "Retrieved user should not be null");
         assertEquals(user, retrievedUser, "Retrieved user should match the added user");
         System.out.println("Get User by ID Test Passed");
@@ -48,12 +48,12 @@ public class UserRepositoryTest {
     void testUpdateUser() {
         String userId = "1"; // Dynamic userId
         User user = createUser(userId, "Raymond29", "pass123", "admin", "Raymond29@gmail.com");
-        repository.addUser(user);
+        repository.add(user);
 
         User updatedUser = createUser(userId, "updated_Raymond29", "updated_pass123", "updated_admin", "updated.Raymond29@gmail.com");
-        repository.updateUser(updatedUser);
+        repository.update(updatedUser);
 
-        User retrievedUser = repository.getUserById(userId);
+        User retrievedUser = repository.getById(userId);
         assertEquals(updatedUser, retrievedUser, "Retrieved updated user should match the updated user");
         System.out.println("Update User Test Passed");
     }
@@ -62,10 +62,10 @@ public class UserRepositoryTest {
     void testDeleteUser() {
         String userId = "1"; // Dynamic userId
         User user = createUser(userId, "Raymond29", "pass123", "admin", "Raymond29@gmail.com");
-        repository.addUser(user);
+        repository.add(user);
 
-        assertTrue(repository.deleteUser(userId), "Deletion should be successful");
-        assertEquals(0, repository.getAllUsers().size(), "Repository should be empty after deletion");
+        assertTrue(repository.delete(userId), "Deletion should be successful");
+        assertEquals(0, repository.getAll().size(), "Repository should be empty after deletion");
         System.out.println("Delete User Test Passed");
     }
 

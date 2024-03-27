@@ -3,6 +3,7 @@ package za.ac.cput.repository;
 import za.ac.cput.domain.User;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 /*
 UserRepository class
@@ -80,4 +81,19 @@ public class UserRepository implements IUserRepository {
     public void addUser(User user) {
 
     }
+
+    public Collection<Object> getAllUsers() {
+        return null;
+    }
+
+    public User getUserById(String userId) {
+        return null;
+    }
+
+    public void updateUser(User updatedUser) {
+    }
+
+    public void deleteUser(String userId) {
+    }
 }
+
