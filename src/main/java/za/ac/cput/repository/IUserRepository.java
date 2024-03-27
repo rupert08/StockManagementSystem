@@ -8,19 +8,8 @@ import za.ac.cput.domain.User;
 
 import java.util.List;
 
-public interface IUserRepository {
-    // Create
-    void addUser(User user);
+public interface IUserRepository extends IRepository<User, String> {
 
-    // Read
-    User getUserById(String userId);
-
-    // Update
-    void updateUser(User user);
-
-    // Delete
-    boolean deleteUser(String userId);
-
-    // Get all users
-    List<User> getAllUsers();
+    User getUsername(String username);
+    List<User> getRole(String role);
 }
