@@ -1,10 +1,15 @@
+/* Order.java
+Order class
+Author: M.Tashreeq (220205663)
+Date: 21 March 2024
+*/
 package za.ac.cput.domain;
 
-import jdk.jfr.Timestamp;
+import java.util.Date;
 
 public class Order {
     private String orderId;
-    private Timestamp date;
+    private Date date;
     private String status;
     private String itemList;
     private String supplierId;
@@ -16,7 +21,6 @@ public class Order {
         this.itemList = builder.itemList;
         this.supplierId = builder.supplierId;
     }
-
     public String getOrderId() {
         return orderId;
     }
@@ -25,11 +29,11 @@ public class Order {
         this.orderId = orderId;
     }
 
-    public Timestamp getDate() {
+    public Date getDate() {
         return date;
     }
 
-    public void setDate(Timestamp date) {
+    public void setDate(Date date) {
         this.date = date;
     }
 
@@ -70,7 +74,7 @@ public class Order {
 
     public static class Builder{
         private String orderId;
-        private Timestamp date;
+        private Date date;
         private String status;
         private String itemList;
         private String supplierId;
@@ -80,7 +84,7 @@ public class Order {
             return this;
         }
 
-        public Builder setDate(Timestamp date) {
+        public Builder setDate(Date date) {
             this.date = date;
             return this;
         }
