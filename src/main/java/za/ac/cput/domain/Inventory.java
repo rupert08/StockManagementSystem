@@ -43,6 +43,9 @@ private Inventory(Builder builder){
                 '}';
     }
 
+    public void setName(String updatedInventory) {
+    }
+
     public static class Builder{
         private String inventoryId;
         private String name;
