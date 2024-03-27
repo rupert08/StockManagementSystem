@@ -5,15 +5,15 @@ Date: 25 March 2024
 */
 package za.ac.cput.repository;
 
-import za.ac.cput.domain.StockItem;
+
 
 public interface IRepository<T,ID> {
     //Create
-    StockItem create(T t);
+    T create(T t);
    //Read
     T read(ID id);
    //Update
-    StockItem update(T t);
+    T update(T t);
     //Delete
     boolean delete(ID id);
 
