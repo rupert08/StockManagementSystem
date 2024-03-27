@@ -1,6 +1,7 @@
 package za.ac.cput.domain;
 
 import java.util.Date;
+import java.util.Objects;
 
 /*
 Transaction POJO
@@ -53,13 +54,13 @@ public class Transaction {
 
     @Override
     public String toString() {
-        return "Transaction:" +
-                "\nTransaction ID='" + transactionId + '\'' +
-                ", User ID='" + userId + '\'' +
-                ", Item ID='" + itemId + '\'' +
-                ", Transaction Type='" + transactionType + '\'' +
-                ", Quantity=" + quantity +
-                ", Date=" + date;
+        return "TRANSACTION:" +
+                "\nTransaction ID: " + transactionId +
+                "\nUser ID: " + userId +
+                "\nItem ID: " + itemId +
+                "\nTransaction Type: " + transactionType  +
+                "\nQuantity: " + quantity +
+                "\nDate: " + date;
     }
 
     public static class Builder {
@@ -92,15 +93,6 @@ public class Transaction {
         }
         public Builder setDate(Date date){
             this.date = date;
-            return this;
-        }
-        public Builder copy(Transaction transaction) {
-            this.transactionId = transaction.transactionId;
-            this.userId = transaction.userId;
-            this.itemId = transaction.itemId;
-            this.transactionType = transaction.transactionType;
-            this.quantity = transaction.quantity;
-            this.date = transaction.date;
             return this;
         }
 
